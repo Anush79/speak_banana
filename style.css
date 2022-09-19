@@ -1,0 +1,183 @@
+:root {
+  --black: #231f20;
+  --blue: #0a75bc;
+  --yellow: #e2c717;
+  --coffee: #a87a51;
+  --grey: #949699;
+  --white: #ffffff;
+}
+::selection {
+  background: var(--coffee);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--yellow);
+  color: var(--black);
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+img {
+  cursor: pointer;
+}
+
+.hanger {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  border-bottom: 10px solid var(--coffee);
+}
+header img {
+  position: fixed;
+  top: -4px;
+  height: 125px;
+  left: 1%;
+}
+#label {
+  position: absolute;
+  left: 43%;
+  width: 15%;
+  /* border-radius: 15px; */
+  margin: auto;
+  padding: 5px;
+  background-color: var(--blue);
+  color: aliceblue;
+}
+
+.input img {
+  position: fixed;
+  right: 65%;
+  top: 380px;
+  width: 150px;
+  z-index: 1;
+  visibility: hidden;
+  transform: scale(0);
+  animation-duration: 1.9s;
+}
+
+.hanging {
+  height: 30px;
+  margin-top: 0;
+  position: relative;
+  left: 35%;
+}
+
+.hanging img {
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  height: 350px;
+  animation: hanging 5s;
+  animation-iteration-count: infinite;
+}
+
+.content {
+  font-size: larger;
+  text-align: center;
+  margin: 10px 210px;
+}
+
+h1 {
+  margin: 30px;
+  font-size: xxx-large;
+  color: var(--blue);
+}
+
+textarea {
+  border-radius: 20px;
+  border: 5px solid;
+  padding: 25px;
+}
+
+.output img {
+  position: fixed;
+  bottom: 1px;
+  left: 63%;
+  width: 11%;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 8px var(--black);
+  font-size: large;
+  color: var(--white);
+  background-color: var(--grey);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+}
+button:hover {
+  background: var(--coffee);
+}
+
+button:active {
+  background-color: var(--blue);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+@keyframes hanging {
+  0% {
+    transform: translate(1px 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-2deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(3deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(2deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-2deg);
+  }
+}
+
+@keyframes pickaboo {
+  0% {
+    visibility: visible;
+  }
+  10% {
+    transform: scale(0.3);
+    visibility: visible;
+  }
+
+  35% {
+    transform: scale(0.5);
+  }
+  45% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    visibility: hidden;
+  }
+}
