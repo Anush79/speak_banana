@@ -94,12 +94,14 @@ textarea {
   border-radius: 20px;
   border: 5px solid;
   padding: 25px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .output img {
-  position: fixed;
+  position: absolute;
   bottom: 1px;
-  left: 63%;
+  right: 20%;
   width: 11%;
 }
 
