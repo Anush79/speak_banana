@@ -21,6 +21,7 @@ function onclick() {
   pickaboo.style.visibility = "visible";
   pickaboo.style.animationName = "pickaboo";
   hello.play();
+  setTimeout( pickaboo.style.animationName = "none", 3000)
 
   fetch(translatedURL(input))
     .then((response) => response.json())
